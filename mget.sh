@@ -1,3 +1,11 @@
+if [ $# -lt 3 ]; then
+	echo ""
+        echo "[usage]   sh ./$0 url thread_num save_out_file(use xxxx.mp4. DON'T use absolute path like /home/xx/xxx.mp4)"
+        echo "[example] sh ./$0 http://xxxxxx.mp4 20 target.mp4"
+	echo ""
+	exit 0
+fi
+
 path=/tmp/$3
 mkdir $path
 len=`curl --head $1 -s |grep "Length"|awk '{print $2}'|tr -d '\r'`
@@ -17,7 +25,7 @@ if [ $i == $(($task-1)) ];then
 end=$len
 fi
 curl -o $path/part$i.tmp $1 -r $start-$end -s &
-echo "curl -o $path/part$i.tmp $1 -r $start-$end &"
+#echo "curl -o $path/part$i.tmp $1 -r $start-$end &"
 catme="$catme $path/part$i.tmp"
 done
 while true
