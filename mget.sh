@@ -35,7 +35,7 @@ if [ $wait -lt 2 ];then
 break
 fi
 sleep 1
-now=`du -sh $path`
+now=`du -sh $path|awk '{print $1}'`
 echo "total $len now $now"
 done
 cat $catme >$3
