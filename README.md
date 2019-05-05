@@ -13,14 +13,14 @@ mainly use the Content-Range feature of HTTP
 
 #### example:
  first,the GFW will let you download at a high speed.
-![avatar](pic/111.png)
+![avatar](pic/111.png = 300x100)
  then, it will be slow
-![avatar](pic/222.png)
+![avatar](pic/222.png = 300x100)
  at last, turns to about 20-40 kBps until the end.
-![avatar](pic/333.png)
+![avatar](pic/333.png = 300x100)
  while you use the mget. if you want better speed,you just add the thread number.
  if your ISP support 20MB/s then you should use 500-1000 threads to download the file.
-![avatar](pic/444.png)
+![avatar](pic/444.png = 300x150)
 
 
 if this project helps you, pls give me a star.
