@@ -11,6 +11,18 @@ so we can archive a multi thread downloader to get different part of a big file,
 
 mainly use the Content-Range feature of HTTP
 
+#### example:
+ first,the GFW will let you download at a high speed.
+![avatar](pic/111.png)
+ then, it will be slow
+![avatar](pic/222.png)
+ at last, turns to about 20-40 kBps until the end.
+![avatar](pic/333.png)
+ while you use the mget. if you want better speed,you just add the thread number.
+ if your ISP support 20MB/s then you should use 500-1000 threads to download the file.
+![avatar](pic/444.png)
+
+
 if this project helps you, pls give me a star.
 
 老铁，点个赞呗！
