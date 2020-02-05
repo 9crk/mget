@@ -8,7 +8,7 @@ fi
 
 path=/tmp/$3
 mkdir $path
-len=`curl --head $1 -s |grep "Length"|awk '{print $2}'|tr -d '\r'`
+len=`curl --head $1 -s |grep "ength"|awk '{print $2}'|tr -d '\r'`
 len=`echo $len | sed 's/\\r//g'`
 task=`echo $2 | sed 's/\\r//g'`
 echo "total len = $len"
