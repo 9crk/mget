@@ -1,3 +1,7 @@
+#author: 9crk
+#contact: admin@9crk.com
+#update in ShenZhen.China at 2020.02.05 when 2019-nConv virus occurs. we are all in home.
+
 if [ $# -lt 3 ]; then
 	echo ""
         echo "[usage]   sh ./$0 url thread_num save_out_file(use xxxx.mp4. DON'T use absolute path like /home/xx/xxx.mp4)"
