@@ -45,11 +45,11 @@ do
         fi
         sleep 1
         now=`du -sm $path|awk '{print $1}'`
-        echo "total $len now $now reDownload=$dontWannaWait"
+        echo "total $len now $now MB   reDownload=$dontWannaWait"
         if [ "$lastSize" == "$now" ];then 
             dontWannaWait=$(($dontWannaWait+1))
-            if [$wait -gt 4 ] && [ $dontWannaWait -gt 3 ];then
-                echo "too slow!!!"
+            if [ $wait -gt 4 ] && [ $dontWannaWait -gt 3 ];then
+                echo "too slow. killed all task to restart"
                 killall curl
                 dontWannaWait=0
             fi
