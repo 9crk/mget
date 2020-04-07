@@ -48,7 +48,7 @@ do
         echo "total $len now $now MB   reDownload=$dontWannaWait"
         if [ "$lastSize" == "$now" ];then 
             dontWannaWait=$(($dontWannaWait+1))
-            if [ $wait -gt 4 ] && [ $dontWannaWait -gt 3 ];then
+            if [ $wait -gt 4 ] && [ $dontWannaWait -gt 30 ];then
                 echo "too slow. killed all task to restart"
                 killall curl
                 dontWannaWait=0
